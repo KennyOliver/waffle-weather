@@ -55,4 +55,4 @@ function degToCompass(deg) {
 }
 
 getWeather();
-setInterval(getWeather, 6000);
+//setInterval(getWeather, 6000);
