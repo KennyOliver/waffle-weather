@@ -40,7 +40,7 @@ function getWeather() {
   }
 
   function error() {
-    location.innerHTML = "Unable to retrieve your location";
+    location.innerHTML = "Can\'t get your location";
   }
 }
 
