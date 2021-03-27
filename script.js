@@ -28,10 +28,10 @@ function getWeather() {
       .then(data => {
         console.log(data); //shows all available API data
         location.innerHTML = data.name + ", " + data.sys.country;
-        temperature.innerHTML = Math.round(data.main.temp) + "°C";
+        temperature.innerHTML = Math.round(data.main.temp) + "°";
         description.innerHTML = data.weather[0].main;
-        feelsLike.innerHTML = `<b>Feels like:</b> ${Math.round(data.main.feels_like)}°C`;
-        tempLowHigh.innerHTML = `<b>Low:</b> ${Math.round(data.main.temp_min)}°C` + "&nbsp;".repeat(8) + `<b>High:</b> ${Math.round(data.main.temp_max)}°C`;
+        feelsLike.innerHTML = `<b>Feels like:</b> ${Math.round(data.main.feels_like)}°`;
+        tempLowHigh.innerHTML = `<b>Low:</b> ${Math.round(data.main.temp_min)}°` + "&nbsp;".repeat(8) + `<b>High:</b> ${Math.round(data.main.temp_max)}°`;
         wind.innerHTML = `<b>Wind:</b> ${degToCompass(data.wind.deg)} ${Math.round(data.wind.speed)}km/h`;
         humidity.innerHTML = `<b>Humidity:</b> ${data.main.humidity}%`;
         pressure.innerHTML = `<b>Pressure:</b> ${data.main.pressure} hPa`;
