@@ -31,7 +31,7 @@ function getWeather() {
         temperature.innerHTML = Math.round(data.main.temp) + "°C";
         description.innerHTML = data.weather[0].main;
         feelsLike.innerHTML = `<b>Feels like:</b> ${Math.round(data.main.feels_like)}°C`;
-        tempLowHigh.innerHTML = `<b>Low:</b> ${Math.round(data.main.temp_min)}°C` + "\t" + `<b>High:</b> ${Math.round(data.main.temp_max)}°C`;
+        tempLowHigh.innerHTML = `<b>Low:</b> ${Math.round(data.main.temp_min)}°C` + "&nbsp;".repeat(8) + `<b>High:</b> ${Math.round(data.main.temp_max)}°C`;
         wind.innerHTML = `<b>Wind:</b> ${degToCompass(data.wind.deg)} ${Math.round(data.wind.speed)}km/h`;
         humidity.innerHTML = `<b>Humidity:</b> ${data.main.humidity}%`;
         pressure.innerHTML = `<b>Pressure:</b> ${data.main.pressure} hPa`;
