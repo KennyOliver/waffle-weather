@@ -1,4 +1,5 @@
 function getWeather() {
+  let location = document.getElementById("location");
   let temperature = document.getElementById("temperature");
   let description = document.getElementById("description");
   let feelsLike = document.getElementById("feels-like");
@@ -6,7 +7,7 @@ function getWeather() {
   let wind = document.getElementById("wind");
   let humidity = document.getElementById("humidity");
   let pressure = document.getElementById("pressure");
-  let location = document.getElementById("location");
+  let cloudiness = document.getElementById("cloudiness");
   let geolocation = document.getElementById("geolocation");
   let weatherIcon = document.getElementById("weather-icon");
 
@@ -35,6 +36,7 @@ function getWeather() {
         wind.innerHTML = `<b>Wind:</b> ${degToCompass(data.wind.deg)} ${Math.round(data.wind.speed)}km/h`;
         humidity.innerHTML = `<b>Humidity:</b> ${data.main.humidity}%`;
         pressure.innerHTML = `<b>Pressure:</b> ${data.main.pressure} hPa`;
+        cloudiness.innerHTML = `<b>Cloudiness:</b> ${data.clouds.all}%`;
         //geolocation.innerHTML = `(${latitude}°, ${longitude}°)`;
         
         weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
