@@ -3,6 +3,7 @@ function getWeather() {
   let description = document.getElementById("description");
   let location = document.getElementById("location");
   let geolocation = document.getElementById("geolocation");
+  let weather_img = document.getElementById("weather-img");
 
   let api = "https://api.openweathermap.org/data/2.5/weather";
   let apiKey = "4a8e56d76aab3920b24af328c175da5b";
@@ -25,6 +26,8 @@ function getWeather() {
         temperature.innerHTML = Math.round(data.main.temp) + "°C";
         description.innerHTML = data.weather[0].main;
         geolocation.innerHTML = `(${latitude}°, ${longitude}°)`;
+        
+        weather_img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
       });
   }
 
