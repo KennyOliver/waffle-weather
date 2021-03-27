@@ -33,7 +33,7 @@ function getWeather() {
         tempLowHigh.innerHTML = `<b>Low:</b> ${Math.round(data.main.temp_min)}°C` + "\t" + `<b>High:</b> ${Math.round(data.main.temp_max)}°C`;
         humidity.innerHTML = `<b>Humidity:</b> ${data.main.humidity}%`;
         pressure.innerHTML = `<b>Pressure:</b> ${data.main.pressure} hPa`;
-        geolocation.innerHTML = `(${latitude}°, ${longitude}°)`;
+        //geolocation.innerHTML = `(${latitude}°, ${longitude}°)`;
         
         weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
       });

@@ -1,9 +1,11 @@
 html {
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  height: 100%;
   text-align: center;
 }
 body {
   background: skyblue;
+  background: linear-gradient(180deg, white 5%, skyblue 50%);
   margin: 0 auto;
 }
 
