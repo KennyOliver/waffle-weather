@@ -2,13 +2,14 @@ function getWeather() {
   let temperature = document.getElementById("temperature");
   let description = document.getElementById("description");
   let location = document.getElementById("location");
+  let geolocation = document.getElementById("geolocation");
 
   let api = "https://api.openweathermap.org/data/2.5/weather";
   let apiKey = "4a8e56d76aab3920b24af328c175da5b";
 
   location.innerHTML = "Locating...";
 
-  navigator.geolocation.getCurrentPosition(success, error);
+  navigator.geolocation.getCurrentPosition(success,error);
 
   function success(position) {
     latitude = position.coords.latitude;
@@ -19,11 +20,11 @@ function getWeather() {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
-        let temp = data.main.temp;
-        temperature.innerHTML = temp + "° C";
-        location.innerHTML = data.name + " (" + latitude + "°, " + longitude + "°)";
+        console.log(data); //shows all available API data
+        location.innerHTML = data.name;
+        temperature.innerHTML = Math.round(data.main.temp) + "°C";
         description.innerHTML = data.weather[0].main;
+        geolocation.innerHTML = `(${latitude}°, ${longitude}°)`;
       });
   }
 
