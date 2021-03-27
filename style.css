@@ -3,7 +3,10 @@ html {
     sans-serif;
   text-align: center;
 }
-
 body {
   margin: 0 auto;
+}
+
+#weather-icon {
+  filter: drop-shadow(12px 12px 10px rgba(0,0,0,0.3));
 }
