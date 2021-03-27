@@ -1,4 +1,4 @@
-# waffle-weather :waffle:
+# waffle-weather :waffle: :sun_behind_rain_cloud:
 
 ![CodeFactor](https://www.codefactor.io/repository/github/KennyOliver/waffle-weather/badge?style=for-the-badge)
 ![Latest SemVer](https://img.shields.io/github/v/tag/KennyOliver/waffle-weather?label=version&sort=semver&style=for-the-badge)
