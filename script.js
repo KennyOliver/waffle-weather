@@ -27,7 +27,7 @@ function getWeather() {
         description.innerHTML = data.weather[0].main;
         geolocation.innerHTML = `(${latitude}°, ${longitude}°)`;
         
-        weather_icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        weather_icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
       });
   }
 

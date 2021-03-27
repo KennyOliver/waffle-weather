@@ -4,9 +4,26 @@ html {
   text-align: center;
 }
 body {
+  background: skyblue;
   margin: 0 auto;
 }
 
 #weather-icon {
+  animation: float 5s ease-in-out infinite;
   filter: drop-shadow(12px 12px 10px rgba(0,0,0,0.3));
+}
+
+@keyframes float {
+	0% {
+		filter: drop-shadow(0 5px 15px 0px rgba(0,0,0,0.6));
+		transform: translateY(0px);
+	}
+	50% {
+		filter: drop-shadow(0 25px 15px 0px rgba(0,0,0,0.2));
+		transform: translateY(-20px);
+	}
+	100% {
+		filter: drop-shadow(0 5px 15px 0px rgba(0,0,0,0.6));
+		transform: translateY(0px);
+	}
 }
