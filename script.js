@@ -3,6 +3,7 @@ function getWeather() {
   let description = document.getElementById("description");
   let feelsLike = document.getElementById("feels-like");
   let tempLowHigh = document.getElementById("temp-low-high");
+  let wind = document.getElementById("wind");
   let humidity = document.getElementById("humidity");
   let pressure = document.getElementById("pressure");
   let location = document.getElementById("location");
@@ -31,6 +32,7 @@ function getWeather() {
         description.innerHTML = data.weather[0].main;
         feelsLike.innerHTML = `<b>Feels like:</b> ${Math.round(data.main.feels_like)}°C`;
         tempLowHigh.innerHTML = `<b>Low:</b> ${Math.round(data.main.temp_min)}°C` + "\t" + `<b>High:</b> ${Math.round(data.main.temp_max)}°C`;
+        wind.innerHTML = `<b>Wind:</b> ${degToCompass(data.wind.deg)} ${Math.round(data.wind.speed)}km/h`;
         humidity.innerHTML = `<b>Humidity:</b> ${data.main.humidity}%`;
         pressure.innerHTML = `<b>Pressure:</b> ${data.main.pressure} hPa`;
         //geolocation.innerHTML = `(${latitude}°, ${longitude}°)`;
@@ -42,6 +44,12 @@ function getWeather() {
   function error() {
     location.innerHTML = "Can\'t get your location";
   }
+}
+
+function degToCompass(deg) {
+    var val = Math.floor((deg / 22.5) + 0.5);
+    var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+    return arr[(val % 16)];
 }
 
 getWeather();
