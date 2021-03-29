@@ -7,9 +7,9 @@ body {
   margin: 0 auto;
 }
 
+
 #weather-icon-container {
   animation: float 5s ease-in-out infinite;
-  /* filter: drop-shadow(12px 12px 10px rgba(0,0,0,0.3)); */
 }
 
 
@@ -20,6 +20,7 @@ body {
 .dark-mode {
   background: linear-gradient(180deg, #070B34 5%, #6B4984 50%);
   color: white;
+  filter: drop-shadow(0px 0px 10px rgba(255,255,255,0.4));
 }
 
 @keyframes float {
