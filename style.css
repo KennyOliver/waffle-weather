@@ -1,7 +1,6 @@
 html {
-  background-size: cover;
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
-  height: 100%;
+  min-height: 100%;
   text-align: center;
 }
 body {
