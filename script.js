@@ -41,7 +41,7 @@ function getWeather() {
         
         let icon = data.weather[0].icon;
         console.log(`Weather icon: ${icon}`);
-        weatherIconContainer.innerHTML = `<img src="icons/${icon}.png">`;
+        weatherIconContainer.innerHTML = `<img src="weatherIconsFlat/${icon}.png" height="150px" width="auto">`;
         //weatherIconContainer.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`; //icons don't work in browser for some reason!
         
         console.log("=".repeat(20));
