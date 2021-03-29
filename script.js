@@ -39,7 +39,10 @@ function getWeather() {
         cloudiness.innerHTML = `<b>Cloudiness:</b> ${data.clouds.all}%`;
         //geolocation.innerHTML = `(${latitude}°, ${longitude}°)`;
         
-        weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+        let icon = data.weather[0].icon;
+        console.log(`Weather icon: ${icon}`);
+        weatherIcon.innerHTML = `<img src="icons/${icon}.png">`;
+        //weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`; //icons don't work in browser for some reason!
       });
   }
 
@@ -55,4 +58,4 @@ function degToCompass(deg) {
 }
 
 getWeather();
-//setInterval(getWeather, 6000);
+setInterval(getWeather, 30000);
