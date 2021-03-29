@@ -47,15 +47,7 @@ function getWeather() {
         weatherIconContainer.innerHTML = `<img src="weatherIconsFlat/${icon}.png" height="150px" width="auto">`;
         //weatherIconContainer.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`; //icons don't work in browser for some reason!
         
-        if (Date.now()/1000 > data.sys.sunset) {
-          console.log("Past sunset:\t" + true);
-          document.body.className = "dark-mode";
-          console.log("Mode applied:\tdark");
-        } else {
-          console.log("Past sunset:\t" + false);
-          document.body.className = "light-mode";
-          console.log("Mode applied:\tlight");
-        }
+        enableDarkMode(data.sys.sunset);
         
         console.log("=".repeat(20));
       });
@@ -70,6 +62,18 @@ function degToCompass(deg) {
     var val = Math.floor((deg / 22.5) + 0.5);
     var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
     return arr[(val % 16)];
+}
+
+function enableDarkMode(apiSunsetUnixTimestamp) {
+  if (Date.now()/1000 > apiSunsetUnixTimestamp) {
+    console.log("Past sunset:\t" + true);
+    document.body.className = "dark-mode";
+    console.log("Mode applied:\tdark");
+  } else {
+    console.log("Past sunset:\t" + false);
+    document.body.className = "light-mode";
+    console.log("Mode applied:\tlight");
+  }
 }
 
 getWeather();
