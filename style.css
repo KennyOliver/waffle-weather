@@ -1,4 +1,5 @@
 html {
+  background-size: cover;
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
   height: 100%;
   text-align: center;
@@ -12,10 +13,6 @@ body {
 #weather-icon-container {
   animation: float 5s ease-in-out infinite;
   /* filter: drop-shadow(12px 12px 10px rgba(0,0,0,0.3)); */
-}
-#weather-icon > img {
-  height: 150px;
-  width: 150px;
 }
 
 @keyframes float {
