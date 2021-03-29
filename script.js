@@ -39,10 +39,23 @@ function getWeather() {
         cloudiness.innerHTML = `<b>Cloudiness:</b> ${data.clouds.all}%`;
         //geolocation.innerHTML = `(${latitude}°, ${longitude}°)`;
         
+        
+        console.log("<-- Useful Info -->");
+        
         let icon = data.weather[0].icon;
         console.log(`Weather icon: ${icon}`);
         weatherIconContainer.innerHTML = `<img src="weatherIconsFlat/${icon}.png" height="150px" width="auto">`;
         //weatherIconContainer.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`; //icons don't work in browser for some reason!
+        
+        if (Date.now()/1000 > data.sys.sunset) {
+          console.log("Past sunset:\t" + true);
+          document.body.className = "dark-mode";
+          console.log("Mode applied:\tdark");
+        } else {
+          console.log("Past sunset:\t" + false);
+          document.body.className = "light-mode";
+          console.log("Mode applied:\tlight");
+        }
         
         console.log("=".repeat(20));
       });

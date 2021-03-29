@@ -5,14 +5,22 @@ html {
   text-align: center;
 }
 body {
-  background: skyblue;
-  background: linear-gradient(180deg, white 5%, skyblue 50%);
   margin: 0 auto;
 }
 
 #weather-icon-container {
   animation: float 5s ease-in-out infinite;
   /* filter: drop-shadow(12px 12px 10px rgba(0,0,0,0.3)); */
+}
+
+
+.light-mode {
+  background: linear-gradient(180deg, white 5%, skyblue 50%);
+  color: black;
+}
+.dark-mode {
+  background: linear-gradient(180deg, #070B34 5%, #6B4984 50%);
+  color: white;
 }
 
 @keyframes float {
