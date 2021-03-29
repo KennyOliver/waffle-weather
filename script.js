@@ -9,7 +9,7 @@ function getWeather() {
   let pressure = document.getElementById("pressure");
   let cloudiness = document.getElementById("cloudiness");
   let geolocation = document.getElementById("geolocation");
-  let weatherIcon = document.getElementById("weather-icon");
+  let weatherIconContainer = document.getElementById("weather-icon-container");
 
   let api = "https://api.openweathermap.org/data/2.5/weather";
   let apiKey = "9cf1ef326b896d750e1017c7bdd96199";
@@ -41,8 +41,10 @@ function getWeather() {
         
         let icon = data.weather[0].icon;
         console.log(`Weather icon: ${icon}`);
-        weatherIcon.innerHTML = `<img src="icons/${icon}.png">`;
-        //weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`; //icons don't work in browser for some reason!
+        weatherIconContainer.innerHTML = `<img src="icons/${icon}.png">`;
+        //weatherIconContainer.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`; //icons don't work in browser for some reason!
+        
+        console.log("=".repeat(20));
       });
   }
 

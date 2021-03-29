@@ -9,11 +9,9 @@ body {
   margin: 0 auto;
 }
 
-#weather-icon {
+#weather-icon > img {
   animation: float 5s ease-in-out infinite;
   filter: drop-shadow(12px 12px 10px rgba(0,0,0,0.3));
-}
-#weather-icon > img {
   height: 150px;
   width: 150px;
 }
