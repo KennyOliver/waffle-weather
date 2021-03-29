@@ -11,6 +11,8 @@
 
 [![GitHub Pages](https://img.shields.io/badge/See%20It%20In%20Action-252525?style=for-the-badge&logo=safari&logoColor=white&link=https://kennyoliver.github.io/waffle-weather/)](https://kennyoliver.github.io/waffle-weather/)
 
+<img src="https://user-images.githubusercontent.com/70860732/112872022-cdbc0b80-90b7-11eb-8430-f72ef18683ae.jpeg" height="500px">
+
 ## neumorphia.css :art: :package:
 **waffle-weather** uses **neumorphia.css** - my own CSS library!
 
