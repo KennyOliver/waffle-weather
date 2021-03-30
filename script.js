@@ -8,7 +8,7 @@ function getWeather() {
   let humidity = document.getElementById("humidity");
   let pressure = document.getElementById("pressure");
   //let cloudiness = document.getElementById("cloudiness");
-  let geolocation = document.getElementById("geolocation");
+  //let geolocation = document.getElementById("geolocation");
   let weatherIconContainer = document.getElementById("weather-icon-container");
 
   let api = "https://api.openweathermap.org/data/2.5/weather";
@@ -54,7 +54,7 @@ function getWeather() {
   }
 
   function error() {
-    location.innerHTML = "Can\'t get your location";
+    location.innerHTML = "Can't get your location";
   }
 }
 
