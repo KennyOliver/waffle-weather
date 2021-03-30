@@ -7,6 +7,7 @@ function getWeather() {
   let wind = document.getElementById("wind");
   let humidity = document.getElementById("humidity");
   let pressure = document.getElementById("pressure");
+  //let cloudiness = document.getElementById("cloudiness");
   let geolocation = document.getElementById("geolocation");
   let weatherIconContainer = document.getElementById("weather-icon-container");
 
@@ -35,7 +36,7 @@ function getWeather() {
         wind.innerHTML = `<b>Wind:</b> ${degToCompass(data.wind.deg)} ${Math.round(data.wind.speed)}m/s`;
         humidity.innerHTML = `<b>Humidity:</b> ${data.main.humidity}%`;
         pressure.innerHTML = `<b>Pressure:</b> ${data.main.pressure} hPa`;
-        cloudiness.innerHTML = `<b>Cloudiness:</b> ${data.clouds.all}%`;
+        //cloudiness.innerHTML = `<b>Cloudiness:</b> ${data.clouds.all}%`;
         //geolocation.innerHTML = `(${latitude}°, ${longitude}°)`;
         
         
