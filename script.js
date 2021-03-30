@@ -7,7 +7,6 @@ function getWeather() {
   let wind = document.getElementById("wind");
   let humidity = document.getElementById("humidity");
   let pressure = document.getElementById("pressure");
-  let cloudiness = document.getElementById("cloudiness");
   let geolocation = document.getElementById("geolocation");
   let weatherIconContainer = document.getElementById("weather-icon-container");
 
@@ -30,7 +29,7 @@ function getWeather() {
         console.log(data); //shows all available API data
         location.innerHTML = data.name + ", " + data.sys.country;
         temperature.innerHTML = Math.round(data.main.temp) + "°";
-        description.innerHTML = data.weather[0].main;
+        description.innerHTML = data.weather[0].description;
         feelsLike.innerHTML = `<b>Feels like:</b> ${Math.round(data.main.feels_like)}°`;
         tempLowHigh.innerHTML = `<b>Low:</b> ${Math.round(data.main.temp_min)}°` + "&nbsp;".repeat(8) + `<b>High:</b> ${Math.round(data.main.temp_max)}°`;
         wind.innerHTML = `<b>Wind:</b> ${degToCompass(data.wind.deg)} ${Math.round(data.wind.speed)}km/h`;
@@ -75,6 +74,7 @@ function enableDarkMode(apiSunsetUnixTimestamp) {
     console.log("Mode applied:\tlight");
   }
 }
+
 
 getWeather();
 setInterval(getWeather, 30000);
