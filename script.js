@@ -28,11 +28,11 @@ function getWeather() {
       .then(data => {
         console.log(data); //shows all available API data
         location.innerHTML = data.name + ", " + data.sys.country;
-        temperature.innerHTML = Math.round(data.main.temp) + "°";
+        feelsLike.innerHTML = Math.round(data.main.feels_like) + "°";
         description.innerHTML = data.weather[0].description;
-        feelsLike.innerHTML = `<b>Feels like:</b> ${Math.round(data.main.feels_like)}°`;
-        tempLowHigh.innerHTML = `<b>Low:</b> ${Math.round(data.main.temp_min)}°` + "&nbsp;".repeat(8) + `<b>High:</b> ${Math.round(data.main.temp_max)}°`;
-        wind.innerHTML = `<b>Wind:</b> ${degToCompass(data.wind.deg)} ${Math.round(data.wind.speed)}km/h`;
+        temperature.innerHTML = `<b>Actual temp: </b> ${Math.round(data.main.temp)}°`;
+        tempLowHigh.innerHTML = `<b>L:</b> ${Math.round(data.main.temp_min)}°` + "&nbsp;".repeat(4) + `<b>H:</b> ${Math.round(data.main.temp_max)}°`;
+        wind.innerHTML = `<b>Wind:</b> ${degToCompass(data.wind.deg)} ${Math.round(data.wind.speed)}m/s`;
         humidity.innerHTML = `<b>Humidity:</b> ${data.main.humidity}%`;
         pressure.innerHTML = `<b>Pressure:</b> ${data.main.pressure} hPa`;
         cloudiness.innerHTML = `<b>Cloudiness:</b> ${data.clouds.all}%`;
@@ -77,4 +77,4 @@ function enableDarkMode(apiSunsetUnixTimestamp) {
 
 
 getWeather();
-setInterval(getWeather, 30000);
+setInterval(getWeather, 60000);
