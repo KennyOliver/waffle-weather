@@ -11,7 +11,7 @@
 
 **The weather’s always wavering and waffling — find out what’s going on!**
 
-[![GitHub Pages](https://img.shields.io/badge/Waffle%20Weather-252525?style=for-the-badge&logo=icloud&logoColor=white&link=https://kennyoliver.github.io/waffle-weather/)](https://kennyoliver.github.io/waffle-weather/)
+[![GitHub Pages](https://img.shields.io/badge/Waffle%20Weather-FAD89F?style=for-the-badge&logo=icloud&logoColor=252525&link=https://kennyoliver.github.io/waffle-weather/)](https://kennyoliver.github.io/waffle-weather/)
 
 ## neumorphia.css :art: :package:
 **waffle-weather** uses **neumorphia.css** – my own CSS framework!
