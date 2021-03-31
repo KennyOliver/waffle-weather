@@ -1,6 +1,6 @@
 # waffle-weather :waffle: :sun_behind_rain_cloud:
-<img src="https://user-images.githubusercontent.com/70860732/112884189-1af3a980-90c7-11eb-88a3-1969cb98451a.jpeg" height="500px" align="right">
-<img src="https://user-images.githubusercontent.com/70860732/112872022-cdbc0b80-90b7-11eb-8430-f72ef18683ae.jpeg" height="500px" align="right">
+<img src="https://user-images.githubusercontent.com/70860732/113120954-0a981780-920a-11eb-9b1c-7d5a19977ceb.jpeg" height="500px" align="right">
+<img src="https://user-images.githubusercontent.com/70860732/113120965-0e2b9e80-920a-11eb-91a9-ac03769566c0.jpeg" height="500px" align="right">
 
 ![CodeFactor](https://www.codefactor.io/repository/github/KennyOliver/waffle-weather/badge?style=for-the-badge)
 ![Latest SemVer](https://img.shields.io/github/v/tag/KennyOliver/waffle-weather?label=version&sort=semver&style=for-the-badge)
