@@ -14,7 +14,7 @@
 [![GitHub Pages](https://img.shields.io/badge/Waffle%20Weather-FAD89F?style=for-the-badge&logo=icloud&logoColor=252525&link=https://kennyoliver.github.io/waffle-weather/)](https://kennyoliver.github.io/waffle-weather/)
 
 ## neumorphia.css :art: :package:
-**waffle-weather** uses **neumorphia.css** – my own CSS framework!
+**simple-web-clock** uses **[neumorphia.css](https://github.com/KennyOliver/neumorphia.css)** – my own CSS framework!
 
 [![neumorphia.css](https://img.shields.io/badge/Get%20neumorphia.css-75D2AF?style=for-the-badge&logo=css3&logoColor=252525&link=https://kennyoliver.github.io/neumorphia.css/neumorphia.css)](https://kennyoliver.github.io/neumorphia.css/neumorphia.css)
 
